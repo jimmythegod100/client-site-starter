@@ -1,0 +1,32 @@
+/**
+ * BRAND TOKENS — change these 5 values for each new client.
+ * Non-developers: edit only the values after the colon.
+ */
+:root {
+  /* 1. Main brand color (buttons, links, accents) */
+  --brand-primary: #1e4d5c;
+
+  /* 2. Dark text / headings */
+  --brand-dark: #1a2428;
+
+  /* 3. Light background */
+  --brand-bg: #f6f8f9;
+
+  /* 4. White cards / header */
+  --brand-surface: #ffffff;
+
+  /* 5. Accent highlight (optional second color) */
+  --brand-accent: #c17f59;
+
+  /* Typography — swap font name if client has a brand font */
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+
+  /* Derived tokens (usually leave these alone) */
+  --text: var(--brand-dark);
+  --text-muted: #5a6569;
+  --border: #dde3e6;
+  --radius: 10px;
+  --shadow: 0 8px 32px rgba(26, 36, 40, 0.08);
+  --max-width: 1080px;
+}
