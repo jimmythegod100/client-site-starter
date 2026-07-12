@@ -1,0 +1,20 @@
+/**
+ * BRAND TOKENS — change these 5 values for each new client.
+ */
+:root {
+  --brand-primary: #1e4d5c;
+  --brand-dark: #1a2428;
+  --brand-bg: #f6f8f9;
+  --brand-surface: #ffffff;
+  --brand-accent: #c17f59;
+
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+
+  --text: var(--brand-dark);
+  --text-muted: #5a6569;
+  --border: #dde3e6;
+  --radius: 10px;
+  --shadow: 0 8px 32px rgba(26, 36, 40, 0.08);
+  --max-width: 1080px;
+}

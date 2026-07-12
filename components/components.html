@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Site Components — Demo</title>
+  <link rel="stylesheet" href="css/shared.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="demo-page-title">Component library demo</h1>
+    <p style="color: var(--text-muted); margin-bottom: 2rem;">Copy any block below into a client site. See <a href="README.md">README</a>.</p>
+
+    <!-- HEADER -->
+    <div class="demo-block">
+      <div class="demo-label">Header</div>
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="logo" href="#">Harbor<span>&</span> Co.</a>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+    </div>
+
+    <!-- HERO -->
+    <div class="demo-block">
+      <div class="demo-label">Hero</div>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <h1>Quality work, clear communication</h1>
+            <p class="lead">Short subhead that explains what you do in plain English.</p>
+            <a class="btn btn-primary" href="#">Get a quote</a>
+            <a class="btn btn-outline" href="#">Our services</a>
+          </div>
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=450&fit=crop" alt="" style="border-radius: var(--radius); box-shadow: var(--shadow);">
+        </div>
+      </section>
+    </div>
+
+    <!-- SERVICES GRID -->
+    <div class="demo-block">
+      <div class="demo-label">Services grid</div>
+      <div class="card-grid">
+        <article class="card"><h3>Service one</h3><p>Short description of what you offer.</p></article>
+        <article class="card"><h3>Service two</h3><p>Another service with clear benefit.</p></article>
+        <article class="card"><h3>Service three</h3><p>Third option for your grid.</p></article>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="demo-block">
+      <div class="demo-label">Call to action band</div>
+      <div class="cta-band">
+        <h2>Ready to get started?</h2>
+        <p>Tell us about your project. We reply within one business day.</p>
+        <a class="btn btn-primary" href="#">Contact us</a>
+      </div>
+    </div>
+
+    <!-- TESTIMONIAL -->
+    <div class="demo-block">
+      <div class="demo-label">Testimonial (real quotes only)</div>
+      <figure class="testimonial">
+        <blockquote>"They showed up on time and explained everything clearly."</blockquote>
+        <cite>— Real Client Name, City</cite>
+      </figure>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="demo-block">
+      <div class="demo-label">Contact form (FormSubmit)</div>
+      <form class="form-card" action="https://formsubmit.co/example@email.com" method="POST">
+        <input type="hidden" name="_subject" value="New inquiry">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="form-group"><label>Name</label><input name="name" required></div>
+        <div class="form-group"><label>Email</label><input name="email" type="email" required></div>
+        <div class="form-group"><label>Message</label><textarea name="message" required></textarea></div>
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="demo-block">
+      <div class="demo-label">Footer</div>
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-brand">Harbor &amp; Co.</div>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{NAME}} — Portfolio</title>
+  <link rel="stylesheet" href="css/brand.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" data-logo>AR</a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" data-nav-toggle>☰</button>
+      <nav>
+        <ul class="nav-links" data-nav-links>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Examples</a></li>
+          <li><a href="#services">Services</a></li>
+          <li id="nav-book" hidden><a href="#book">Book a call</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" data-hero-eyebrow>Available for new projects</p>
+          <h1 data-hero-headline>Websites that look pro</h1>
+          <p class="lead" data-hero-sub>Portfolio subhead loads from config.</p>
+          <a class="btn btn-primary" href="#contact">Get a quote</a>
+          <a class="btn btn-outline" href="#work">See examples</a>
+        </div>
+        <img class="hero-image" data-hero-img src="" alt="" width="800" height="600" loading="eager">
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="content-block" data-about></div>
+        <p class="price-note">Typical projects: <strong data-price-range>$150–$400</strong></p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="work">
+      <div class="container">
+        <h2 class="section-title">Example styles</h2>
+        <p class="section-intro">Concept layouts — not fake client names. Swap with real work when you have it.</p>
+        <div class="card-grid" data-work-grid></div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <div class="card-grid" data-services-grid></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="book" hidden>
+      <div class="container">
+        <h2 class="section-title">Book a call</h2>
+        <p class="section-intro">Pick a time that works — powered by Calendly when URL is set in config.</p>
+        <div class="calendly-wrap">
+          <iframe id="calendly-frame" title="Schedule a call"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div>
+            <p>Email: <a href="#" data-email>hello@example.com</a></p>
+            <div class="social-row">
+              <a id="social-instagram" href="#" hidden>Instagram</a>
+              <a id="social-linkedin" href="#" hidden>LinkedIn</a>
+              <a id="social-github" href="#" hidden>GitHub</a>
+            </div>
+            <div id="payment-buttons" class="social-row" hidden>
+              <a id="pay-stripe" class="btn btn-outline" href="#" hidden>Stripe</a>
+              <a id="pay-paypal" class="btn btn-outline" href="#" hidden>PayPal</a>
+              <a id="pay-venmo" class="btn btn-outline" href="#" hidden>Venmo</a>
+            </div>
+          </div>
+          <form class="form-card" data-contact-form method="POST">
+            <input type="hidden" name="_subject" value="">
+            <input type="hidden" name="_next" value="">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © <span data-year></span> <span data-footer-name></span>
+    </div>
+  </footer>
+
+  <script src="js/site-config.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/integrations.js"></script>
+</body>
+</html>

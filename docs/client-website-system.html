@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Website System — Start Here</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f8f9;
+      --surface: #ffffff;
+      --text: #1a2428;
+      --muted: #5a6569;
+      --primary: #1e4d5c;
+      --accent: #c17f59;
+      --border: #dde3e6;
+      --radius: 10px;
+      --font-head: 'Fraunces', Georgia, serif;
+      --font-body: 'Source Sans 3', system-ui, sans-serif;
+      --max: 720px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 2rem 1.25rem 4rem;
+    }
+    .wrap { max-width: var(--max); margin: 0 auto; }
+    h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .intro { color: var(--muted); margin: 0 0 2rem; font-size: 1.05rem; }
+    label { font-weight: 600; display: block; margin-bottom: 0.5rem; }
+    select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font: inherit;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      margin-bottom: 1.5rem;
+    }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 32px rgba(26,36,40,0.06);
+    }
+    .panel h2 {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      margin: 0 0 0.75rem;
+      color: var(--primary);
+    }
+    .panel p { margin: 0 0 1rem; color: var(--muted); }
+    .panel ul { margin: 0; padding-left: 1.25rem; }
+    .panel li { margin-bottom: 0.35rem; }
+    a { color: var(--primary); }
+    .nav-grid {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+    .nav-grid a {
+      display: block;
+      padding: 0.85rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .nav-grid a:hover { border-color: var(--primary); }
+    .nav-grid small { display: block; color: var(--muted); font-weight: 400; margin-top: 0.2rem; }
+    code {
+      background: #eef2f4;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Client Website System</h1>
+    <p class="intro">Pick what you're building. Each kit has a README, brief, and checklist. Plain English — no jargon required.</p>
+
+    <label for="kit-picker">What are you building?</label>
+    <select id="kit-picker" aria-label="Choose a kit">
+      <option value="">— Choose one —</option>
+      <option value="html">Small business website (HTML)</option>
+      <option value="wix">Client needs to edit it themselves (Wix)</option>
+      <option value="portfolio">Freelancer portfolio (one page)</option>
+      <option value="components">Copy a header, form, or section</option>
+      <option value="playbook">Process, brief, or checklist only</option>
+    </select>
+
+    <div id="panel-html" class="panel hidden">
+      <h2>HTML Business Starter</h2>
+      <p>Home, About, Services, Contact. Free GitHub Pages hosting. Best when you maintain the site.</p>
+      <ul>
+        <li>Folder: <code>starters/html/</code></li>
+        <li>Copy folder → edit <code>js/site-config.js</code> + <code>css/brand.css</code></li>
+        <li>Preview: <code>cd starters/html && python3 -m http.server 8080</code></li>
+      </ul>
+      <p><a href="../starters/html/README.md">Open README →</a></p>
+    </div>
+
+    <div id="panel-wix" class="panel hidden">
+      <h2>Wix Kit</h2>
+      <p>Drag-and-drop for the client. Uses your Chrome login + <code>wix-do</code> automation.</p>
+      <ul>
+        <li>Folder: <code>starters/wix/</code></li>
+        <li>Read <code>WIX-WORKFLOW.md</code> for real commands</li>
+        <li>Start: <code>~/.organized/bin/wix-do status</code></li>
+      </ul>
+      <p><a href="../starters/wix/README.md">Open README →</a></p>
+    </div>
+
+    <div id="panel-portfolio" class="panel hidden">
+      <h2>Portfolio Starter</h2>
+      <p>One-page site for selling your own services. Calendly + social + FormSubmit.</p>
+      <ul>
+        <li>Folder: <code>starters/portfolio/</code></li>
+        <li>Preview: <code>cd starters/portfolio && python3 -m http.server 8081</code></li>
+      </ul>
+      <p><a href="../starters/portfolio/README.md">Open README →</a></p>
+    </div>
+
+    <div id="panel-components" class="panel hidden">
+      <h2>Component Library</h2>
+      <p>Reusable header, hero, services grid, CTA, form, footer — same look as HTML starter.</p>
+      <ul>
+        <li>Open <code>components/components.html</code> in browser</li>
+        <li>Copy the block you need into a client site</li>
+      </ul>
+      <p><a href="../components/components.html">Open demo page →</a></p>
+    </div>
+
+    <div id="panel-playbook" class="panel hidden">
+      <h2>Playbook</h2>
+      <p>Canonical brief, launch checklist, decision tree, and full process.</p>
+      <ul>
+        <li><a href="../playbook/CLIENT-BRIEF.md">Client brief</a></li>
+        <li><a href="../playbook/CHECKLIST-LAUNCH.md">Launch checklist</a></li>
+        <li><a href="../playbook/DECISION-TREE.md">Which kit?</a></li>
+        <li><a href="../playbook/NEW-CLIENT-CHEATSHEET.md">One-page cheat sheet</a></li>
+      </ul>
+    </div>
+
+    <h2 style="font-family: var(--font-head); font-size: 1.2rem; margin-top: 2rem;">All kits</h2>
+    <div class="nav-grid">
+      <a href="../starters/html/index.html">HTML starter — live demo home<small>starters/html/</small></a>
+      <a href="../starters/portfolio/index.html">Portfolio — live demo<small>starters/portfolio/</small></a>
+      <a href="../components/components.html">Components demo<small>components/</small></a>
+      <a href="../CLIENT-WEBSITE-SYSTEM.md">Markdown hub (full map)<small>CLIENT-WEBSITE-SYSTEM.md</small></a>
+      <a href="../playbook/NEW-CLIENT-CHEATSHEET.md">New client cheat sheet<small>playbook/</small></a>
+    </div>
+  </div>
+
+  <script>
+    const picker = document.getElementById('kit-picker');
+    const panels = {
+      html: document.getElementById('panel-html'),
+      wix: document.getElementById('panel-wix'),
+      portfolio: document.getElementById('panel-portfolio'),
+      components: document.getElementById('panel-components'),
+      playbook: document.getElementById('panel-playbook')
+    };
+    picker.addEventListener('change', () => {
+      Object.values(panels).forEach(p => p.classList.add('hidden'));
+      const v = picker.value;
+      if (panels[v]) panels[v].classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

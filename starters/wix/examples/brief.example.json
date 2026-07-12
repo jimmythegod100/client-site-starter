@@ -1,0 +1,23 @@
+{
+  "businessName": "Harbor Bakery",
+  "editor": "studio",
+  "template": "blank",
+  "pages": ["Home", "About", "Contact"],
+  "colors": ["#1e4d5c", "#f6f8f9"],
+  "homeIntro": "Fresh bread and pastries baked daily in downtown Harbor City.",
+  "contactBlurb": "Visit us or send a message — we reply within one business day.",
+  "imagesDir": "~/My Drive/Website Clients/Harbor Bakery/03-Assets",
+  "images": [
+    {
+      "role": "logo",
+      "path": "~/My Drive/Website Clients/Harbor Bakery/03-Assets/logo.png"
+    },
+    {
+      "role": "hero",
+      "path": "~/My Drive/Website Clients/Harbor Bakery/03-Assets/storefront.jpg",
+      "page": "Home",
+      "caption": "Storefront on Main Street"
+    }
+  ],
+  "notes": "Starter Wix package — copy from playbook CLIENT-BRIEF.md"
+}

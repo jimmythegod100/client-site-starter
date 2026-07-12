@@ -1,0 +1,100 @@
+/**
+ * Shared component styles — aligned with starters/html/css/brand.css
+ * Import brand.css first, then this file.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+:root {
+  --brand-primary: #1e4d5c;
+  --brand-dark: #1a2428;
+  --brand-bg: #f6f8f9;
+  --brand-surface: #ffffff;
+  --brand-accent: #c17f59;
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --text: var(--brand-dark);
+  --text-muted: #5a6569;
+  --border: #dde3e6;
+  --radius: 10px;
+  --shadow: 0 8px 32px rgba(26, 36, 40, 0.08);
+  --max-width: 1080px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-body); color: var(--text); background: var(--brand-bg); line-height: 1.6; }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.25rem; }
+
+.demo-page-title {
+  font-family: var(--font-heading);
+  padding: 2rem 0 1rem;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.demo-block {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.demo-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--brand-accent);
+  margin-bottom: 1rem;
+}
+
+/* === Components (same as main.css core) === */
+.site-header { background: var(--brand-surface); border-bottom: 1px solid var(--border); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+.logo { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700; color: var(--text); text-decoration: none; }
+.logo span { color: var(--brand-primary); }
+.nav-links { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+.nav-links a { color: var(--text); font-weight: 500; text-decoration: none; }
+
+.hero { padding: 3rem 0; background: linear-gradient(160deg, var(--brand-surface), var(--brand-bg)); }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+.hero h1 { font-family: var(--font-heading); font-size: 2.25rem; margin: 0 0 1rem; }
+.hero .lead { color: var(--text-muted); margin: 0 0 1.5rem; }
+
+.btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: var(--radius); font-weight: 600; text-decoration: none; border: none; cursor: pointer; font-family: inherit; }
+.btn-primary { background: var(--brand-primary); color: #fff; }
+.btn-outline { background: transparent; color: var(--brand-primary); border: 2px solid var(--brand-primary); margin-left: 0.5rem; }
+
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+.card { background: var(--brand-surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow); }
+.card h3 { font-family: var(--font-heading); margin: 0 0 0.5rem; font-size: 1.1rem; }
+.card p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+
+.cta-band { background: var(--brand-primary); color: #fff; padding: 2.5rem; border-radius: var(--radius); text-align: center; }
+.cta-band h2 { font-family: var(--font-heading); margin: 0 0 0.75rem; }
+.cta-band p { margin: 0 0 1.25rem; opacity: 0.9; }
+.cta-band .btn-primary { background: #fff; color: var(--brand-primary); }
+
+.testimonial {
+  background: var(--brand-surface);
+  border-left: 4px solid var(--brand-accent);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  box-shadow: var(--shadow);
+}
+.testimonial blockquote { margin: 0 0 0.75rem; font-style: italic; }
+.testimonial cite { font-size: 0.9rem; color: var(--text-muted); font-style: normal; }
+
+.form-card { background: var(--brand-surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; max-width: 420px; }
+.form-group { margin-bottom: 0.85rem; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 0.3rem; font-size: 0.95rem; }
+.form-group input, .form-group textarea { width: 100%; padding: 0.6rem; border: 1px solid var(--border); border-radius: var(--radius); font: inherit; }
+
+.site-footer { background: var(--brand-dark); color: #c8d0d4; padding: 2rem 0; margin-top: 1rem; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; align-items: center; }
+.footer-brand { font-family: var(--font-heading); color: #fff; }
+.footer-links { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+.footer-links a { color: #c8d0d4; text-decoration: none; }
+
+@media (max-width: 700px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .nav-links { flex-wrap: wrap; gap: 0.75rem; }
+}
