@@ -68,6 +68,8 @@ Use this before you tell the client the site is live. Kit-specific extras are in
 - [ ] Sent client the live URL
 - [ ] Explained how contact form emails work
 - [ ] Documented how to request future edits
+- [ ] Docker handoff package built (`handoff-package.sh . --zip`) and smoke-tested
+- [ ] `CLIENT-RUN.md` + filled `HANDOFF.md` included
 - [ ] Invoice / final payment (if applicable)
 - [ ] Archived copy of brief and final config
 
@@ -75,3 +77,4 @@ Use this before you tell the client the site is live. Kit-specific extras are in
 
 **Launched on:** _______________  
 **Live URL:** _______________
+**Handoff zip:** _______________

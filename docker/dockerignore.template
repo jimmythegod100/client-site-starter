@@ -1,0 +1,13 @@
+.git
+.env
+.env.*
+*.md
+CLIENT-BRIEF.md
+CHECKLIST.md
+HANDOFF*
+PROJECT.md
+.DS_Store
+docker/docker-compose.yml
+docker/docker-compose.build.yml
+docker/dockerignore.template
+handoffs

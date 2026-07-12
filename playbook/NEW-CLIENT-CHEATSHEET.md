@@ -45,6 +45,14 @@ python3 -m http.server 8080
 
 ## 5. Handoff
 
+```bash
+# From client-site-starter/
+./bin/handoff-package.sh ../CLIENT-SLUG --zip
+# or: ~/.organized/bin/client-handoff static ../CLIENT-SLUG --zip
+```
+
+- Fill `HANDOFF.md` (live URL + support window)
+- Send zip + `CLIENT-RUN.md` to client
 - Explain form emails
 - Archive brief + config
 - Final invoice
@@ -52,6 +60,7 @@ python3 -m http.server 8080
 ## Help
 
 - Hub: [docs/client-website-system.html](../docs/client-website-system.html)
+- Docker handoff: `~/Projects/vincent-web-portfolio/studio/docs/DOCKER-HANDOFF.md`
 - Components: [components/](../components/)
 - Full process: [PROCESS.md](PROCESS.md)
 - SEO: `~/.organized/docs/SEO-AUDIT.md`

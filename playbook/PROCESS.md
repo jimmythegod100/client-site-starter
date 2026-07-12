@@ -61,6 +61,7 @@ Send the client:
 
 - Live URL
 - How contact form / Wix forms reach their inbox
+- **Docker package** (HTML/Portfolio/Studio): zip from `handoff-package.sh` / `make handoff … ZIP=1` with `CLIENT-RUN.md`
 - What is included in support (e.g. 30 days of small text fixes)
 - How to request paid updates
 
@@ -68,8 +69,10 @@ Archive in your files:
 
 - Final `CLIENT-BRIEF.md`
 - Final `site-config.js` or `brief.json`
+- Handoff zip under `handoffs/`
 - Invoice / completion date
 
+See also: `~/Projects/vincent-web-portfolio/studio/docs/DOCKER-HANDOFF.md`
 ## Timeline guide (honest)
 
 | Kit | Typical turnaround |

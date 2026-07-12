@@ -64,6 +64,18 @@ if [[ -f "${ROOT}/playbook/CLIENT-BRIEF.md" && ! -f "${DEST}/CLIENT-BRIEF.md" ]]
   cp "${ROOT}/playbook/CLIENT-BRIEF.md" "${DEST}/CLIENT-BRIEF.md"
 fi
 
+# Wire Docker preview/handoff for static kits (skip Wix — hosted by Wix)
+if [[ "$KIT" != "wix" && -d "${ROOT}/docker" ]]; then
+  mkdir -p "${DEST}/docker"
+  cp "${ROOT}/docker/nginx.conf" "${DEST}/docker/nginx.conf"
+  cp "${ROOT}/docker/Dockerfile" "${DEST}/docker/Dockerfile"
+  cp "${ROOT}/docker/docker-compose.yml" "${DEST}/docker-compose.yml"
+  cp "${ROOT}/docker/docker-compose.build.yml" "${DEST}/docker/docker-compose.build.yml"
+  cp "${ROOT}/docker/dockerignore.template" "${DEST}/.dockerignore"
+  printf 'PORT=8080\n' > "${DEST}/.env.example"
+  cp "${DEST}/.env.example" "${DEST}/.env"
+fi
+
 # Seed a README for the new project
 {
   echo "# ${SLUG}"
@@ -74,14 +86,21 @@ fi
   echo
   echo "1. Fill \`CLIENT-BRIEF.md\`"
   echo "2. Edit \`js/site-config.js\` (and \`css/brand.css\` for HTML kits)"
-  echo "3. Preview: \`python3 -m http.server 8080\`"
+  echo "3. Preview (pick one):"
+  echo "   - Docker: \`../client-site-starter/bin/preview-docker.sh .\`  → http://localhost:8080"
+  echo "   - Quick:  \`python3 -m http.server 8080\`"
   echo "4. Launch checklist: \`CHECKLIST.md\`"
-  echo "5. After go-live: \`~/.organized/bin/seo-do https://YOUR-LIVE-URL\`"
+  echo "5. Handoff package: \`../client-site-starter/bin/handoff-package.sh . --zip\`"
+  echo "6. After go-live: \`~/.organized/bin/seo-do https://YOUR-LIVE-URL\`"
 } > "${DEST}/PROJECT.md"
 
 echo "Created: $DEST"
 echo "Kit:     $KIT"
 echo "Preview: cd \"$DEST\" && python3 -m http.server 8080"
+if [[ "$KIT" != "wix" ]]; then
+  echo "Docker:  \"${ROOT}/bin/preview-docker.sh\" \"$DEST\""
+  echo "Handoff: \"${ROOT}/bin/handoff-package.sh\" \"$DEST\" --zip"
+fi
 if [[ "$KIT" == "wix" ]]; then
   echo "Wix:     see WIX-WORKFLOW.md — ~/.organized/bin/wix-do status"
 fi

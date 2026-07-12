@@ -39,10 +39,14 @@ client-site-starter/          ← this repo (monorepo)
 ## Open locally
 
 ```bash
-# Scaffold a new HTML business site
+# Scaffold a new HTML business site (includes Docker files)
 ./bin/new-client.sh demo-harbor --out /tmp
 
-# HTML business starter (template itself)
+# Docker preview (Podman on this iMac)
+./bin/preview-docker.sh /tmp/demo-harbor
+# → http://localhost:8080
+
+# Or python fallback
 cd starters/html && python3 -m http.server 8080
 
 # Portfolio starter
@@ -55,8 +59,16 @@ cd components && python3 -m http.server 8082
 open docs/client-website-system.html
 ```
 
-## Wix automation (when client picks Wix)
+## Client Docker handoff
 
+```bash
+./bin/handoff-package.sh /path/to/finished-site --zip
+# or: ~/.organized/bin/client-handoff static /path/to/finished-site --zip
+```
+
+Client runs `docker compose up --build` from the zip. Full guide: `~/Projects/vincent-web-portfolio/studio/docs/DOCKER-HANDOFF.md`.
+
+## Wix automation (when client picks Wix)
 See [starters/wix/WIX-WORKFLOW.md](starters/wix/WIX-WORKFLOW.md). Uses your logged-in Chrome session — never stores passwords.
 
 ```bash
