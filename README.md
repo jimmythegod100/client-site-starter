@@ -18,7 +18,12 @@ A complete toolkit for building small client websites — HTML business sites, W
 ## Quick start
 
 ```bash
-# Pick a kit, copy for a new client
+# New client from a kit (recommended)
+./bin/new-client.sh acme-plumbing                 # HTML business kit
+./bin/new-client.sh alex-rivera --kit portfolio
+./bin/new-client.sh bob-bakery --kit wix --out ~/projects/client-sites
+
+# Or copy manually
 cp -R starters/html ../acme-plumbing-site
 
 # Preview
@@ -26,3 +31,5 @@ cd ../acme-plumbing-site && python3 -m http.server 8080
 ```
 
 Fill [playbook/CLIENT-BRIEF.md](playbook/CLIENT-BRIEF.md) first, then customize the starter.
+
+After go-live: `~/.organized/bin/seo-do https://LIVE-URL` (or Jenny: “SEO audit this page”).

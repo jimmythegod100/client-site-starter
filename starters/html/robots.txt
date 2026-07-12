@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# After you set the real GitHub Pages URL, update the Sitemap line:
+Sitemap: https://yourusername.github.io/client-site-starter/sitemap.xml

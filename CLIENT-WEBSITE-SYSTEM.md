@@ -32,14 +32,17 @@ client-site-starter/          ← this repo (monorepo)
 
 1. **Choose kit** — see decision table above or [playbook/DECISION-TREE.md](playbook/DECISION-TREE.md)
 2. **Fill brief** — [playbook/CLIENT-BRIEF.md](playbook/CLIENT-BRIEF.md)
-3. **Copy starter folder** — one folder per client project
+3. **Scaffold** — `./bin/new-client.sh client-slug` (or copy a starter folder)
 4. **Build** — edit `site-config.js` + brand colors; use [components/](components/) if needed
-5. **Launch** — [playbook/CHECKLIST-LAUNCH.md](playbook/CHECKLIST-LAUNCH.md)
+5. **Launch** — [playbook/CHECKLIST-LAUNCH.md](playbook/CHECKLIST-LAUNCH.md) then `seo-do` the live URL
 
 ## Open locally
 
 ```bash
-# HTML business starter
+# Scaffold a new HTML business site
+./bin/new-client.sh demo-harbor --out /tmp
+
+# HTML business starter (template itself)
 cd starters/html && python3 -m http.server 8080
 
 # Portfolio starter
@@ -66,4 +69,7 @@ See [starters/wix/WIX-WORKFLOW.md](starters/wix/WIX-WORKFLOW.md). Uses your logg
 
 - Portfolio skill: `~/.cursor/skills/static-portfolio-github-pages/SKILL.md`
 - Wix docs: `~/.organized/docs/WIX-AUTOMATION.md`
+- SEO audits: `~/.organized/docs/SEO-AUDIT.md` (`seo-do` / `orcusctl seo-do`)
+- GitHub Pages workflow notes: [docs/GITHUB-PAGES.md](docs/GITHUB-PAGES.md)
 - Website skills guide: `../docs/website-skills-reference.html` (in nexus workspace)
+- HTML practice lessons: `~/Desktop/web building practice/LESSONS.md`

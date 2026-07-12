@@ -53,7 +53,11 @@ Use this before you tell the client the site is live. Check each box.
 
 - [ ] Page titles make sense (not "{{BRAND}}" literally)
 - [ ] Meta description filled in (`site-config.js` → `seo.description`)
-- [ ] Favicon added (optional but nice)
+- [ ] `siteUrl` in `site-config.js` matches the live URL
+- [ ] `robots.txt` + `sitemap.xml` updated with live base URL
+- [ ] Favicon shows in the browser tab (`favicon.svg` or replace with PNG)
+- [ ] Privacy page linked in footer
+- [ ] After go-live: run `~/.organized/bin/seo-do https://YOUR-LIVE-URL` and fix high issues
 - [ ] Google Search Console submitted (optional, post-launch)
 
 ---

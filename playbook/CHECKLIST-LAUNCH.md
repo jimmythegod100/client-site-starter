@@ -49,6 +49,8 @@ Use this before you tell the client the site is live. Kit-specific extras are in
 - [ ] Page titles make sense
 - [ ] Meta description filled in
 - [ ] Favicon added (optional)
+- [ ] `robots.txt` / `sitemap.xml` point at the live URL (HTML kit)
+- [ ] Post-launch: `seo-do https://LIVE-URL` — fix all **high** issues before handoff
 
 ---
 

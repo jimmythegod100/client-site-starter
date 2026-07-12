@@ -17,6 +17,37 @@
   }
   meta.content = cfg.seo?.description || c.pitch;
 
+  function upsertMeta(attr, key, value) {
+    if (!value) return;
+    let el = document.querySelector(`meta[${attr}="${key}"]`);
+    if (!el) {
+      el = document.createElement('meta');
+      el.setAttribute(attr, key);
+      document.head.appendChild(el);
+    }
+    el.setAttribute('content', value);
+  }
+
+  upsertMeta('property', 'og:title', document.title);
+  upsertMeta('property', 'og:description', meta.content);
+  upsertMeta('property', 'og:type', 'website');
+  if (c.siteUrl) upsertMeta('property', 'og:url', c.siteUrl);
+  if (cfg.hero?.image) upsertMeta('property', 'og:image', cfg.hero.image);
+  upsertMeta('name', 'twitter:card', 'summary_large_image');
+
+  const ld = document.createElement('script');
+  ld.type = 'application/ld+json';
+  ld.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: c.name,
+    jobTitle: c.title,
+    email: c.email,
+    url: c.siteUrl,
+    description: cfg.seo?.description || c.pitch
+  });
+  document.head.appendChild(ld);
+
   const logo = document.querySelector('[data-logo]');
   if (logo) logo.textContent = cfg.client.initials;
 
@@ -82,7 +113,11 @@
 
   const toggle = document.querySelector('[data-nav-toggle]');
   const nav = document.querySelector('[data-nav-links]');
-  toggle?.addEventListener('click', () => nav?.classList.toggle('open'));
+  toggle?.addEventListener('click', () => {
+    const open = nav?.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  if (toggle) toggle.setAttribute('aria-expanded', 'false');
 
   const year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();

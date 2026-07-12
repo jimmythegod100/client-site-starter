@@ -6,6 +6,8 @@ window.SITE_CONFIG = {
   brand: {
     name: 'Harbor & Co.',
     shortName: 'Harbor',
+    // Optional: override the header logo text (defaults to shortName)
+    logoText: 'Harbor',
     tagline: 'Local service you can trust.',
     email: 'hello@example.com',
     phone: '(555) 123-4567',
@@ -49,6 +51,7 @@ window.SITE_CONFIG = {
   },
   seo: {
     description: 'Harbor & Co. — trusted local service for homes and small businesses.',
+    // Prefer a 1200×630 JPG/PNG on your live domain; falls back to hero image
     ogImage: ''
   }
 };

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace YOUR_BASE with the live site URL (no trailing slash), then commit. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>YOUR_BASE/</loc></url>
+  <url><loc>YOUR_BASE/about.html</loc></url>
+  <url><loc>YOUR_BASE/services.html</loc></url>
+  <url><loc>YOUR_BASE/contact.html</loc></url>
+  <url><loc>YOUR_BASE/privacy.html</loc></url>
+</urlset>

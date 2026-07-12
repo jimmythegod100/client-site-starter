@@ -17,14 +17,18 @@ Copy [CLIENT-BRIEF.md](CLIENT-BRIEF.md) → fill → client sign-off
 ## 3. Build
 
 ```bash
-cp -R starters/html ../NEW-CLIENT-NAME
-cd ../NEW-CLIENT-NAME
-# Edit css/brand.css (5 colors)
+# From client-site-starter/
+./bin/new-client.sh NEW-CLIENT-NAME                 # HTML kit
+./bin/new-client.sh NEW-CLIENT-NAME --kit portfolio
+./bin/new-client.sh NEW-CLIENT-NAME --kit wix
+
+cd ../NEW-CLIENT-NAME   # or your --out path
+# Edit css/brand.css (5 colors) — HTML kits
 # Edit js/site-config.js (all text)
 python3 -m http.server 8080
 ```
 
-**Wix instead:**
+**Wix instead (automation):**
 
 ```bash
 ~/.organized/bin/wix-do status
@@ -37,6 +41,7 @@ python3 -m http.server 8080
 - [ ] [CHECKLIST-LAUNCH.md](CHECKLIST-LAUNCH.md)
 - [ ] Test form on phone
 - [ ] Send live URL to client
+- [ ] `seo-do https://LIVE-URL` — fix **high** issues
 
 ## 5. Handoff
 
@@ -49,3 +54,4 @@ python3 -m http.server 8080
 - Hub: [docs/client-website-system.html](../docs/client-website-system.html)
 - Components: [components/](../components/)
 - Full process: [PROCESS.md](PROCESS.md)
+- SEO: `~/.organized/docs/SEO-AUDIT.md`
