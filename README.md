@@ -33,3 +33,13 @@ cd ../acme-plumbing-site && python3 -m http.server 8080
 Fill [playbook/CLIENT-BRIEF.md](playbook/CLIENT-BRIEF.md) first, then customize the starter.
 
 After go-live: `~/.organized/bin/seo-do https://LIVE-URL` (or Jenny: “SEO audit this page”).
+
+## Nexus workspace entry
+
+From the Nexus root (preferred):
+
+```bash
+../bin/new-client-site.sh your-business-slug
+```
+
+Default output: `../client-sites/<slug>`.

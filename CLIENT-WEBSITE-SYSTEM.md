@@ -17,7 +17,7 @@ One assembly line for building small client websites. Pick the right kit, fill t
 ## Folder map
 
 ```
-client-site-starter/          ← this repo (monorepo)
+site-kits/          ← this repo (monorepo)
 ├── CLIENT-WEBSITE-SYSTEM.md  ← you are here
 ├── docs/client-website-system.html
 ├── starters/
@@ -83,5 +83,5 @@ See [starters/wix/WIX-WORKFLOW.md](starters/wix/WIX-WORKFLOW.md). Uses your logg
 - Wix docs: `~/.organized/docs/WIX-AUTOMATION.md`
 - SEO audits: `~/.organized/docs/SEO-AUDIT.md` (`seo-do` / `orcusctl seo-do`)
 - GitHub Pages workflow notes: [docs/GITHUB-PAGES.md](docs/GITHUB-PAGES.md)
-- Website skills guide: `../docs/website-skills-reference.html` (in nexus workspace)
+- Website skills guide: `../docs/website-skills-reference.html`
 - HTML practice lessons: `~/Desktop/web building practice/LESSONS.md`

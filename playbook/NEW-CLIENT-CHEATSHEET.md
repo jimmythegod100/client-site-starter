@@ -1,5 +1,8 @@
 # New client cheat sheet
 
+**Nexus entry (preferred):** from repo root run `./bin/new-client-site.sh <slug>` → lands in `client-sites/<slug>`.
+
+
 Print or keep this open. One page.
 
 ## 1. Pick kit
